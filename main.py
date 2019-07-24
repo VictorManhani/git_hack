@@ -8,6 +8,8 @@ import pytz
 import datetime
 
 repo = git.Git()
+files = [arquivo for arquivo in os.listdir('.')]
+FILE_PATH = 'data.json'
 
 # n is the quantity of the commits
 def make_commit(n):
@@ -22,16 +24,14 @@ def make_commit(n):
     y = datetime.timedelta(days = y)
     today = datetime.datetime.now(pytz.utc)
     DATE = str(today - days + x + y)
-    FILE_PATH = 'data.json'
-
+    
     data = {"date": str(DATE)}
     print(data['date'])
     
     with open(FILE_PATH, 'w') as json_file:
         json.dump(data, json_file)
 
-    print([arquivo for arquivo in os.listdir('.')])
-    repo.add([arquivo for arquivo in os.listdir('.')])
+    repo.add(files)
     repo.commit(m = DATE, date = DATE)
     n -= 1
     make_commit(n)

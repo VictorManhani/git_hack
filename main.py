@@ -30,6 +30,7 @@ def make_commit(n):
     with open(FILE_PATH, 'w') as json_file:
         json.dump(data, json_file)
 
+    print([arquivo for arquivo in os.listdir('.')])
     repo.add([arquivo for arquivo in os.listdir('.')])
     repo.commit(m = DATE, date = DATE)
     n -= 1

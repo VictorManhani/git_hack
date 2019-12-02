@@ -1,7 +1,7 @@
 # git_hack
 My python git hack repository.
 
-requirements:
+## requirements:
 
 python >= 3.7.7
 
@@ -16,4 +16,4 @@ pytz >= 2019.3
 * change your .git to this .git cloned repository
 * run python3 -m main.py
 
-be happy. 🚀🚀🚀
+> be happy. 🚀🚀🚀

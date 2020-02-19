@@ -1,2 +1,2 @@
 # git_hack
-My git hack repository.
+My python git hack repository.
